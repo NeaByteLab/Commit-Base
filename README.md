@@ -5,16 +5,25 @@
 ![Last Commit](https://img.shields.io/github/last-commit/NeaByteLab/Commit-Base)
 ![Open Issues](https://img.shields.io/github/issues/NeaByteLab/Commit-Base)
 
-**Commit Base** is an automated GitHub workflow that enforces commit message standards and repository quality checks for every Pull Request.
+**Commit Base** is an automated GitHub workflow that enforces commit message standards and repository quality checks for every **Pull Request** *and* **push to the main branch**.
 
 ---
 
 ## ✨ Features
 
-* **Strict commit message linting** for every PR
+* **Strict commit message linting** for every PR and push to main
 * **README.md, LICENSE, and .gitignore** files are required in every branch
-* Easy integration with any GitHub repository
-* Fail-fast CI/CD: PRs cannot be merged unless all checks pass
+* **Clear error messages** for fast troubleshooting
+* **Easy integration** with any GitHub repository
+* **Fail-fast CI/CD**: no changes will be merged or pushed to main unless all checks pass
+
+---
+
+## 🚀 Quick Start
+
+1. Copy `.github/workflows/standard-repo.yml` into your repository.
+2. Ensure your project root contains `README.md`, `LICENSE`, and `.gitignore`.
+3. Create a Pull Request **or** push to the main branch — Commit Base will automatically check everything!
 
 ---
 
@@ -35,29 +44,29 @@ Every commit must follow this pattern:
 * `docs(readme): update documentation :memo:`
 * `revert(login): restore previous login logic :rewind:`
 
-❗ If any commit message does not match this format, or if required files are missing, the Pull Request will fail and cannot be merged.
+❗ If any commit message does not match this format, or if required files are missing, the check will fail and your PR or push will be blocked.
 
 ---
 
 ## ✅ Quality Gate Checks
 
-* Enforces commit message format for all PRs
-* Fails PR if `README.md`, `LICENSE`, or `.gitignore` is missing
+* Enforces commit message format for all PRs and pushes to main
+* Fails if `README.md`, `LICENSE`, or `.gitignore` is missing
 * Clear error messages for fast troubleshooting
-
----
-
-## 🚀 Quick Start
-
-1. Copy `.github/workflows/standard-repo.yml` into your repository.
-2. Make sure you have `README.md`, `LICENSE`, and `.gitignore` in your project root.
-3. Create a Pull Request and see Commit Base in action!
 
 ---
 
 ## 🙌 Contributing
 
 Want to contribute? Please check out [CONTRIBUTING.md](CONTRIBUTING.md) for commit message format and PR rules.
+
+---
+
+## 💡 Advanced Usage
+
+* You can customize the workflow file to enforce more files or rules if needed.
+* Add or edit allowed commit types and scopes by adjusting the workflow regex.
+* The workflow can be extended for other branches (e.g., `dev`) by editing the trigger in the workflow YAML.
 
 ---
 
