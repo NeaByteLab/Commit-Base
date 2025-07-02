@@ -1,6 +1,9 @@
 name: Commit Base Checks
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     types: [opened, edited, synchronize, reopened]
 
@@ -14,6 +17,10 @@ jobs:
       - name: Lint commit messages
         run: |
           COMMITS=$(git log origin/main..HEAD --pretty=format:"%s")
+          if [ -z "$COMMITS" ]; then
+            echo "No new commit messages to check. Skipping commit lint."
+            exit 0
+          fi
           echo "::group::Commit messages"
           echo "$COMMITS"
           echo "::endgroup::"
