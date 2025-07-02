@@ -1,6 +1,7 @@
 # Commit Base
 
-![Commit Base Checks](https://github.com/NeaByteLab/Commit-Base/actions/workflows/standard-repo.yml/badge.svg)
+[![Install this app](https://img.shields.io/badge/GitHub%20App-Commit%20Base%20Linter-blue?logo=github)](https://github.com/apps/commit-base-linter)
+![CI](https://github.com/NeaByteLab/Commit-Base/actions/workflows/standard-repo.yml/badge.svg)
 ![License](https://img.shields.io/github/license/NeaByteLab/Commit-Base)
 ![Last Commit](https://img.shields.io/github/last-commit/NeaByteLab/Commit-Base)
 ![Open Issues](https://img.shields.io/github/issues/NeaByteLab/Commit-Base)
@@ -56,17 +57,24 @@ Every commit must follow this pattern:
 
 ---
 
-## 🙌 Contributing
-
-Want to contribute? Please check out [CONTRIBUTING.md](CONTRIBUTING.md) for commit message format and PR rules.
-
----
 
 ## 💡 Advanced Usage
 
 * You can customize the workflow file to enforce more files or rules if needed.
 * Add or edit allowed commit types and scopes by adjusting the workflow regex.
 * The workflow can be extended for other branches (e.g., `dev`) by editing the trigger in the workflow YAML.
+
+---
+
+## 🙌 Contributing
+
+Want to contribute? Please check out [CONTRIBUTING.md](CONTRIBUTING.md) for commit message format and PR rules.
+
+---
+
+## 🆘 Need Help?
+
+- Found a bug or want a feature? [Open an issue](https://github.com/NeaByteLab/Commit-Base/issues)
 
 ---
 

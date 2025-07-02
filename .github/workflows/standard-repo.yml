@@ -1,4 +1,4 @@
-name: Commit Base Checks
+name: ci
 
 on:
   push:
